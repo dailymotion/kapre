@@ -174,7 +174,7 @@ def get_stft_kernels(n_dft, keras_ver='new'):
 
     # prepare DFT filters
     timesteps = range(n_dft)
-    w_ks = [(2 * np.pi * k) / float(n_dft) for k in xrange(n_dft)]
+    w_ks = [(2 * np.pi * k) / float(n_dft) for k in range(n_dft)]
     dft_real_kernels = np.array([[np.cos(w_k * n) for n in timesteps]
                                  for w_k in w_ks])
     dft_imag_kernels = np.array([[np.sin(w_k * n) for n in timesteps]
